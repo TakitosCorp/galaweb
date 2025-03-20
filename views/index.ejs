@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <%- include('components/head') %>
+</head>
+
+<body class="bg-purple-50">
+  <!-- Navigation -->
+  <%- include('components/nav') %>
+
+  <!-- Main Content -->
+  <main class="pt-16">
+    <!-- Hero Section with Video -->
+    <section class="relative mx-auto">
+      <video autoplay loop muted playsinline class="w-full h-[70vh] object-cover">
+        <source src="/public/vid/header.mp4" type="video/mp4">
+      </video>
+      <div class="absolute inset-0 bg-purple-50 bg-opacity-20 backdrop-blur-sm flex items-center justify-center">
+        <img src="/public/img/Logo.avif" alt="Gala Logo" class="h-48 w-auto">
+      </div>
+      <div class="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-purple-50"></div>
+    </section>
+
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <!-- Story Section -->
+      <section class="bg-white rounded-lg shadow-xl p-8 mb-16">
+        <div class="prose max-w-none">
+          <h2 class="text-2xl font-bold text-primary mb-4 text-center">Mi lore 🐙🥢</h2>
+          <p class="text-gray-700">¿Que como me convertí en un híbrido entre humano y pulpo? Pues es una historia bastante interesante... Permíteme contártela!</p>
+          <p class="text-gray-700 mt-4">Un día como cualquier otro, vi una pequeña criatura semejante a un pulpo que parecía necesitar ayuda, como nadie se la ofrecía fui yo misma a hacerlo. "¿Que podía pasar mal?" Pensé. Seguro que si ayudaba a una extraña criatura me convertía en una chica mágica, como en las series.</p>
+          <p class="text-gray-700 mt-4">Para mi mala suerte, fue todo lo contrario. Después de unos días de cuidar a ese pulpo, al que apodé como "Takito", mi habitación empezó a emitir una extraña luz y, sorpresa, al siguiente día, mi cabello era completamente morado, y no solo eso, también había adoptado forma de tentáculos. Era lo opuesto a la típica "Magical Girl" que anhelaba ser. Pero quien sabe, quizá esta nueva y extraña forma tenga algún beneficio, ¿No?</p>
+        </div>
+      </section>
+
+      <!-- Evolution Section -->
+      <section class="bg-white rounded-lg shadow-xl p-8 mb-16">
+        <h2 class="text-2xl font-bold text-primary mb-8 text-center">Mis evoluciones 🌟</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div class="aspect-square">
+            <img src="/public/img/Gala1.avif" alt="Version 1.0" class="w-full h-full object-cover rounded-full border-4 border-primary">
+          </div>
+          <div class="aspect-square">
+            <img src="/public/img/Gala7.avif" alt="Version 1.5" class="w-full h-full object-cover rounded-full border-4 border-primary">
+          </div>
+          <div class="aspect-square">
+            <img src="/public/img/Gala2.avif" alt="Version 2.0" class="w-full h-full object-cover rounded-full border-4 border-primary">
+          </div>
+          <div class="aspect-square">
+            <img src="/public/img/Gala3.avif" alt="Version 3.0" class="w-full h-full object-cover rounded-full border-4 border-primary">
+          </div>
+        </div>
+      </section>
+
+      <!-- References Section -->
+      <section class="bg-white rounded-lg shadow-xl p-8 mb-16">
+        <h2 class="text-2xl font-bold text-primary mb-8 text-center">Mis referencias 🎨</h2>
+        <div class="carousel">
+          <div class="carousel-inner">
+            <div><img src="/public/img/Refs 1.avif" alt="Reference 1"></div>
+            <div><img src="/public/img/Refs 2.avif" alt="Reference 2"></div>
+            <div><img src="/public/img/Refs 3.avif" alt="Reference 3"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Info Section -->
+      <section class="mb-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="bg-white rounded-lg shadow-xl p-6">
+            <h2 class="text-2xl font-bold text-primary mb-4">Historia de la minita detrás de Gala 📖</h2>
+            <img src="/public/img/Gala5.avif" alt="Persona detrás de Gala" class="w-full mb-4">
+            <div class="text-gray-700 space-y-4">
+              <p>Soy una apasionada de las Vtubers, como todos los que estáis aquí.</p>
+              <p>Sigo contenido de estas Idols Virtuales desde hace muchos años, siendo mi primer contacto con este mundo "Kizuna Ai" la madre de todas nosotras.</p>
+              <p>Después de años siendo espectadora decidí dar el paso, así que investigando lo suficiente por fin pude dar inicio a este gran proyecto.</p>
+              <p>Y así, un 14 de Junio de 2023, nació esta chica de pulpo que ahora veís por las redes.</p>
+            </div>
+          </div>
+          <div class="bg-white rounded-lg shadow-xl p-6">
+            <h2 class="text-2xl font-bold text-primary mb-4">Información sobre Galita 🔎​</h2>
+            <img src="/public/img/Gala4.avif" alt="Gala Info" class="w-full mb-4">
+            <div class="text-gray-700 space-y-2">
+              <p>Cumpleaños: 24 de Diciembre</p>
+              <p>Debut: 14 de Junio de 2023</p>
+              <p>Altura: 152</p>
+              <p>Nombre del fandom: Takitos (Takochinos)</p>
+              <p>Hashtags: #Galitart #Takochinart</p>
+              <p class="mt-4">Objetivos: Me encantaría celebrar un concierto 3D, tener una canción original y ampliar mi público como streamer. Son objetivos complicados pero no imposibles, y con el tiempo podré lograrlos, además de plantear metas más ambiciosas.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Credits Section -->
+      <section class="bg-white rounded-lg shadow-xl p-8 flex items-center">
+        <img src="/public/img/Gala6.avif" alt="Creditos" class="w-40 h-40 mr-8">
+        <div class="text-gray-700 flex-1 text-right">
+          <h2 class="text-2xl font-bold text-primary mb-4">Créditos 👥</h2>
+          <p>Ilustraciones de la página: Byakko, mariadefresa</p>
+          <p>Modelo: Wygaia</p>
+          <p>Rig: 1.0, 1.5 y 2.0 Byakko - 3.0 MitsukiMoonVT</p>
+          <p>Página web: TakitosCorp</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <%- include('components/footer') %>
+
+  <%- include('components/scripts') %>
+</body>
+
+</html>

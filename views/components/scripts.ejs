@@ -1,0 +1,18 @@
+<script src="/public/js/jquery.js"></script>
+<script src="/public/js/slick.js"></script>
+<script src="/public/js/menu.js"></script>
+<script>
+  $(document).ready(function() {
+    $('.carousel-inner').slick({
+      infinite: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 5000,
+      arrows: true
+    });
+  });
+</script>
+<script>
+  document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>

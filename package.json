@@ -3,9 +3,8 @@
   "version": "1.0.0",
   "description": "La página web oficial de GalaYaki",
   "main": "main.js",
-  "scripts": {
-
-  },
+  "type": "module",
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/TakitosCorp/galaweb.git"
@@ -15,5 +14,9 @@
   "bugs": {
     "url": "https://github.com/TakitosCorp/galaweb/issues"
   },
-  "homepage": "https://github.com/TakitosCorp/galaweb#readme"
+  "homepage": "https://github.com/TakitosCorp/galaweb#readme",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.2"
+  }
 }
