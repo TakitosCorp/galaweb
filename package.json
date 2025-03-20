@@ -1,0 +1,19 @@
+{
+  "name": "galaweb",
+  "version": "1.0.0",
+  "description": "La página web oficial de GalaYaki",
+  "main": "main.js",
+  "scripts": {
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TakitosCorp/galaweb.git"
+  },
+  "author": "AlexDeveloperUwU",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TakitosCorp/galaweb/issues"
+  },
+  "homepage": "https://github.com/TakitosCorp/galaweb#readme"
+}
