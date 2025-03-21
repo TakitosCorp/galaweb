@@ -1,0 +1,10 @@
+services:
+  app:
+    build: .
+    ports:
+      - "3006:3000"
+    environment:
+      - PORT=3000
+    volumes:
+      - ./.env:/app/.env
+      - ./id_rsa:/app/id_rsa
