@@ -4,7 +4,9 @@
   "description": "La página web oficial de GalaYaki",
   "main": "main.js",
   "type": "module",
-  "scripts": {},
+  "scripts": {
+    "start": "node main.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/TakitosCorp/galaweb.git"
