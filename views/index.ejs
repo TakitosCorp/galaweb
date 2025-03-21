@@ -1,75 +1,189 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<head>
-  <%- include('components/head') %>
-</head>
+<%- include('components/head') %>
 
-<body class="bg-purple-50">
-  <!-- Navigation -->
-  <%- include('components/nav') %>
-
-  <!-- Main Content -->
-  <main class="pt-16">
-    <!-- Hero Section with Video -->
-    <section class="relative mx-auto">
-      <video autoplay loop muted playsinline class="w-full h-[70vh] object-cover">
-        <source src="/public/vid/header.mp4" type="video/mp4">
-      </video>
-      <div class="absolute inset-0 bg-purple-50 bg-opacity-20 backdrop-blur-sm flex items-center justify-center">
-        <img src="/public/img/Logo.avif" alt="Gala Logo" class="h-48 w-auto max-w-full">
+<body class="text-gray-800 overflow-x-hidden">
+  <div class="bg-overlay"></div>
+  <div class="fixed inset-0" id="bubbles-container"></div>
+  <%- include('components/header') %>
+  <section class="min-h-screen pt-14 flex flex-col justify-center items-center relative px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl w-full flex flex-col md:flex-row items-center justify-center gap-8 py-16">
+      <div class="md:w-1/2 flex justify-center">
+        <img src="/public/img/Gala9.avif" alt="GalaYaki" class="max-h-[60vh] object-contain animate-float drop-shadow-xl  rounded-xl">
       </div>
-      <div class="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-purple-50"></div>
+      <div class="md:w-1/2 text-center md:text-left">
+        <h1 class="text-5xl md:text-6xl font-bold text-gradient animate-glow mb-4">GalaYaki</h1>
+        <p class="text-xl md:text-2xl text-gray-700 mb-8">La VTuber pulpo que conquistará tu corazón 💜</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+          <a href="#" class="bg-gradient-primary text-white font-semibold py-3 px-6 rounded-full shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+            Ver streams
+          </a>
+          <a href="#discord" class="bg-white text-primary font-semibold py-3 px-6 rounded-full shadow-lg border-2 border-primary hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+            Unirse a Discord
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="hidden md:block absolute bottom-8 text-center text-primary font-medium">
+      <span>Descubre mi mundo</span>
+      <div class="mt-2">
+        <i class="fas fa-chevron-down animate-bounce"></i>
+      </div>
+    </div>
+  </section>
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section class="py-10">
+      <div class="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl overflow-hidden">
+        <div class="relative bg-gradient-primary py-8 px-6 text-white overflow-hidden">
+          <div class="absolute top-0 left-0 w-full h-full opacity-20">
+            <div class="absolute -top-4 -left-4 w-24 h-24 rounded-full border-4 border-white/30"></div>
+            <div class="absolute top-1/2 right-12 w-16 h-16 rounded-full border-4 border-white/30"></div>
+            <div class="absolute bottom-4 left-1/3 w-12 h-12 rounded-full border-4 border-white/30"></div>
+          </div>
+          <h2 class="text-3xl md:text-4xl font-bold text-center relative z-10">Mi Historia 🐙🥢</h2>
+          <p class="text-center text-white/80 mt-2 max-w-2xl mx-auto relative z-10">El curioso origen de una VTuber mitad humana, mitad pulpo</p>
+        </div>
+        <div class="p-6 sm:p-10">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            <div class="lg:col-span-5 space-y-6">
+              <div class="relative rounded-xl overflow-hidden shadow-lg">
+                <img src="/public/img/Gala10.avif" alt="Takito" class="w-full h-auto">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
+                  <p class="text-white p-4 text-sm italic">"El día que conocí a Takito, mi vida cambió para siempre..."</p>
+                </div>
+              </div>
+              <div class="bg-purple-100 rounded-xl p-5 border-l-4 border-primary relative">
+                <div class="absolute -top-3 -left-3 text-primary text-4xl opacity-20">
+                  <i class="fas fa-quote-left"></i>
+                </div>
+                <p class="italic text-gray-700 relative z-10">"¿Qué podía pasar mal?" Pensé. Seguro que si ayudaba a una extraña criatura me convertía en una chica mágica, como en las series.</p>
+                <div class="absolute -bottom-3 -right-3 text-primary text-4xl opacity-20">
+                  <i class="fas fa-quote-right"></i>
+                </div>
+              </div>
+            </div>
+            <div class="lg:col-span-7">
+              <div class="prose prose-lg max-w-none text-gray-700">
+                <p class="text-lg leading-relaxed">¿Quieres saber cómo terminé convirtiéndome en un híbrido entre humano y pulpo? Es una historia bastante peculiar... ¡Déjame contártela!</p>
+                <div class="my-6 flex items-center gap-3">
+                  <div class="h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent flex-grow"></div>
+                  <div class="text-primary">
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <div class="h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent flex-grow"></div>
+                </div>
+                <p>Todo comenzó en un día aparentemente normal. Me crucé con una pequeña criatura similar a un pulpo que parecía necesitar ayuda desesperadamente. Como nadie más hacía nada al respecto, decidí intervenir.</p>
+                <br>
+                <p>Sin embargo, mi suerte resultó ser otra. Después de varios días cuidando al peculiar pulpo, al que bauticé como <span class="font-semibold text-primary">"Takito"</span>, mi habitación comenzó a brillar con una luz extraña. Y para mi sorpresa, al día siguiente, mi cabello había cambiado completamente: ahora era de un profundo color morado y se había transformado en tentáculos.</p>
+                <div class="my-6 relative">
+                  <div class="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-16 bg-gradient-to-b from-primary/20 to-primary/80 rounded-full"></div>
+                  <p class="pl-6 text-gray-700 border-b border-dashed border-primary/30 pb-3 italic">
+                    En lugar de convertirme en la <span class="font-medium text-primary">"Magical Girl"</span> que soñaba ser, terminé siendo algo totalmente opuesto. Una transformación inesperada que cambiaría mi destino para siempre.
+                  </p>
+                </div>
+                <p>Pero quién sabe... tal vez esta nueva y extraña forma tenga sus ventajas, ¿no crees?</p>
+                <div class="mt-8 text-right">
+                  <span class="inline-block border-b-2 border-primary text-primary font-medium">— GalaYaki</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
-
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <!-- Story Section -->
-      <section class="bg-white rounded-lg shadow-xl p-8 mb-16">
-        <div class="prose max-w-none text-lg">
-          <h2 class="text-2xl font-bold text-primary mb-8 text-center">Mi lore 🐙🥢</h2>
-          <p class="text-gray-700">¿Que como me convertí en un híbrido entre humano y pulpo? Pues es una historia bastante interesante... Permíteme contártela!</p>
-          <p class="text-gray-700 mt-4">Un día como cualquier otro, vi una pequeña criatura semejante a un pulpo que parecía necesitar ayuda, como nadie se la ofrecía fui yo misma a hacerlo. "¿Que podía pasar mal?" Pensé. Seguro que si ayudaba a una extraña criatura me convertía en una chica mágica, como en las series.</p>
-          <p class="text-gray-700 mt-4">Para mi mala suerte, fue todo lo contrario. Después de unos días de cuidar a ese pulpo, al que apodé como "Takito", mi habitación empezó a emitir una extraña luz y, sorpresa, al siguiente día, mi cabello era completamente morado, y no solo eso, también había adoptado forma de tentáculos. Era lo opuesto a la típica "Magical Girl" que anhelaba ser. Pero quien sabe, quizá esta nueva y extraña forma tenga algún beneficio, ¿No?</p>
+    <section class="py-10">
+      <div class="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl p-6 sm:p-10">
+        <h2 class="text-3xl md:text-4xl font-bold text-primary text-center mb-16 relative inline-block left-1/2 -translate-x-1/2">
+          Mi Evolución 🌟
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="bg-white/90 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-xl" data-aos="fade-up">
+            <div class="p-4 bg-gradient-primary text-white font-bold text-center">
+              Versión 1.0
+            </div>
+            <div class="p-4">
+              <div class="aspect-square overflow-hidden rounded-lg mb-4">
+                <img src="/public/img/Gala1.avif" alt="Version 1.0" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+              </div>
+            </div>
+          </div>
+          <div class="bg-white/90 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-xl" data-aos="fade-up" data-aos-delay="100">
+            <div class="p-4 bg-gradient-primary text-white font-bold text-center">
+              Versión 1.5
+            </div>
+            <div class="p-4">
+              <div class="aspect-square overflow-hidden rounded-lg mb-4">
+                <img src="/public/img/Gala7.avif" alt="Version 1.5" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+              </div>
+            </div>
+          </div>
+          <div class="bg-white/90 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-xl" data-aos="fade-up" data-aos-delay="200">
+            <div class="p-4 bg-gradient-primary text-white font-bold text-center">
+              Versión 2.0
+            </div>
+            <div class="p-4">
+              <div class="aspect-square overflow-hidden rounded-lg mb-4">
+                <img src="/public/img/Gala2.avif" alt="Version 2.0" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+              </div>
+            </div>
+          </div>
+          <div class="bg-white/90 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-xl" data-aos="fade-up" data-aos-delay="300">
+            <div class="p-4 bg-gradient-primary text-white font-bold text-center">
+              Versión 3.0
+            </div>
+            <div class="p-4">
+              <div class="aspect-square overflow-hidden rounded-lg mb-4">
+                <img src="/public/img/Gala3.avif" alt="Version 3.0" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+              </div>
+            </div>
+          </div>
         </div>
-      </section>
-
-      <!-- Evolution Section -->
-      <section class="bg-white rounded-lg shadow-xl p-8 mb-16">
-        <h2 class="text-2xl font-bold text-primary mb-8 text-center">Mis evoluciones 🌟</h2>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-lg">
-          <div class="aspect-square">
-            <img src="/public/img/Gala1.avif" alt="Version 1.0" class="w-full h-full object-cover rounded-full border-4 border-primary">
+      </div>
+    </section>
+    <section class="py-10">
+      <div class="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl p-6 sm:p-10">
+        <h2 class="text-3xl md:text-4xl font-bold text-primary text-center mb-16 relative inline-block left-1/2 -translate-x-1/2">
+          Mis Referencias 🎨
+        </h2>
+        <div class="relative">
+          <div class="overflow-hidden rounded-xl shadow-xl">
+            <div id="carousel" class="flex transition-transform duration-500 ease-in-out">
+              <div class="min-w-full">
+                <img src="/public/img/Refs 1.avif" alt="Reference 1" class="w-full h-auto">
+              </div>
+              <div class="min-w-full">
+                <img src="/public/img/Refs 2.avif" alt="Reference 2" class="w-full h-auto">
+              </div>
+              <div class="min-w-full">
+                <img src="/public/img/Refs 3.avif" alt="Reference 3" class="w-full h-auto">
+              </div>
+            </div>
           </div>
-          <div class="aspect-square">
-            <img src="/public/img/Gala7.avif" alt="Version 1.5" class="w-full h-full object-cover rounded-full border-4 border-primary">
-          </div>
-          <div class="aspect-square">
-            <img src="/public/img/Gala2.avif" alt="Version 2.0" class="w-full h-full object-cover rounded-full border-4 border-primary">
-          </div>
-          <div class="aspect-square">
-            <img src="/public/img/Gala3.avif" alt="Version 3.0" class="w-full h-full object-cover rounded-full border-4 border-primary">
+          <button id="prevBtn" class="absolute top-1/2 left-4 -translate-y-1/2 bg-white/80 hover:bg-white text-primary w-10 h-10 rounded-full flex items-center justify-center shadow-md transition-all duration-300 hover:scale-110">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button id="nextBtn" class="absolute top-1/2 right-4 -translate-y-1/2 bg-white/80 hover:bg-white text-primary w-10 h-10 rounded-full flex items-center justify-center shadow-md transition-all duration-300 hover:scale-110">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+          <div class="flex justify-center mt-4 gap-2" id="carousel-dots">
+            <button class="w-3 h-3 rounded-full bg-primary opacity-100 transition-all duration-300" data-index="0"></button>
+            <button class="w-3 h-3 rounded-full bg-primary opacity-50 transition-all duration-300" data-index="1"></button>
+            <button class="w-3 h-3 rounded-full bg-primary opacity-50 transition-all duration-300" data-index="2"></button>
           </div>
         </div>
-      </section>
-
-      <!-- References Section -->
-      <section class="bg-white rounded-lg shadow-xl p-8 mb-16">
-        <h2 class="text-2xl font-bold text-primary mb-8 text-center">Mis referencias 🎨</h2>
-        <div class="carousel overflow-hidden">
-          <div class="carousel-inner">
-            <div><img src="/public/img/Refs 1.avif" alt="Reference 1"></div>
-            <div><img src="/public/img/Refs 2.avif" alt="Reference 2"></div>
-            <div><img src="/public/img/Refs 3.avif" alt="Reference 3"></div>
+      </div>
+    </section>
+    <section class="py-10">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-white/90 backdrop-blur-sm rounded-xl shadow-xl overflow-hidden transition-all duration-300 hover:-translate-y-2 h-full flex flex-col">
+          <div class="p-6 bg-gradient-primary">
+            <h2 class="text-2xl font-bold text-white text-center">Historia detrás de Gala 📖</h2>
           </div>
-        </div>
-      </section>
-
-      <!-- Info Section -->
-      <section class="mb-16">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div class="bg-white rounded-lg shadow-xl p-6">
-            <h2 class="text-2xl font-bold text-primary mb-8">Historia de la minita detrás de Gala 📖</h2>
-            <img src="/public/img/Gala5.avif" alt="Persona detrás de Gala" class="w-full mb-4">
+          <div class="p-6 flex-1 flex flex-col">
+            <div class="aspect-square rounded-lg overflow-hidden mb-6 flex-shrink-0">
+              <img src="/public/img/Gala5.avif" alt="Persona detrás de Gala" class="w-full h-full object-cover">
+            </div>
             <div class="text-gray-700 space-y-4">
               <p>Soy una apasionada de las Vtubers, como todos los que estáis aquí.</p>
               <p>Sigo contenido de estas Idols Virtuales desde hace muchos años, siendo mi primer contacto con este mundo "Kizuna Ai" la madre de todas nosotras.</p>
@@ -77,58 +191,122 @@
               <p>Y así, un 14 de Junio de 2023, nació esta chica de pulpo que ahora veís por las redes.</p>
             </div>
           </div>
-          <div class="bg-white rounded-lg shadow-xl p-6">
-            <h2 class="text-2xl font-bold text-primary mb-8">Información sobre Galita 🔎​</h2>
-            <img src="/public/img/Gala4.avif" alt="Gala Info" class="w-full mb-4">
-            <div class="text-gray-700 space-y-2">
-              <p>Cumpleaños: 24 de Diciembre</p>
-              <p>Debut: 14 de Junio de 2023</p>
-              <p>Altura: 152</p>
-              <p>Nombre del fandom: Takitos (Takochinos)</p>
-              <p>Hashtags: #Galitart #Takochinart</p>
-              <p class="mt-4">Objetivos: Me encantaría celebrar un concierto 3D, tener una canción original y ampliar mi público como streamer. Son objetivos complicados pero no imposibles, y con el tiempo podré lograrlos, además de plantear metas más ambiciosas.</p>
-            </div>
-          </div>
         </div>
-      </section>
-
-      <!-- Credits Section -->
-      <section class="mb-16">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div class="bg-white rounded-lg shadow-xl p-6">
-            <h2 class="text-2xl font-bold text-primary mb-8">Servidor de Discord</h2>
-            <img src="/public/img/Gala8.avif" alt="Servidor de Discord" class="w-full mb-4">
-            <div class="text-gray-700 space-y-4">
-              <p>Únete al server de Discord para estar al tanto de todo junto al resto de Takitos!!</p>
-              <p>¿Qué te espera en el server?</p>
-              <ul class="list-disc list-inside">
-                <li>Toda la comunidad de Takitos con la que podrás hablar</li>
-                <li>Eventos exclusivos</li>
-                <li>Avisos de directos y vídeos nuevos</li>
-                <li>Charleta también con la pulpo a la gallega Galala!</li>
-                <li>Y mucho más...</li>
+        <div class="bg-white/90 backdrop-blur-sm rounded-xl shadow-xl overflow-hidden transition-all duration-300 hover:-translate-y-2 h-full flex flex-col">
+          <div class="p-6 bg-gradient-primary">
+            <h2 class="text-2xl font-bold text-white text-center">Información sobre Galita 🔎</h2>
+          </div>
+          <div class="p-6 flex-1 flex flex-col">
+            <div class="aspect-square rounded-lg overflow-hidden mb-6 flex-shrink-0">
+              <img src="/public/img/Gala4.avif" alt="Gala Info" class="w-full h-full object-cover">
+            </div>
+            <div class="space-y-4">
+              <ul class="space-y-2">
+                <li class="flex border-b border-gray-200 py-2">
+                  <span class="font-bold text-primary w-40">Cumpleaños:</span>
+                  <span>24 de Diciembre</span>
+                </li>
+                <li class="flex border-b border-gray-200 py-2">
+                  <span class="font-bold text-primary w-40">Debut:</span>
+                  <span>14 de Junio de 2023</span>
+                </li>
+                <li class="flex border-b border-gray-200 py-2">
+                  <span class="font-bold text-primary w-40">Altura:</span>
+                  <span>152 cm</span>
+                </li>
+                <li class="flex border-b border-gray-200 py-2">
+                  <span class="font-bold text-primary w-40">Fandom:</span>
+                  <span>Takitos (Takochinos)</span>
+                </li>
+                <li class="flex border-b border-gray-200 py-2">
+                  <span class="font-bold text-primary w-40">Hashtags:</span>
+                  <span>#Galitart #Takochinart</span>
+                </li>
               </ul>
-              <p class="mt-4"><a href="https://discord.gg/Cbd5b59Zjs" class="text-blue-500 underline">¡Te esperamos!</a></p>
-            </div>
-          </div>
-          <div class="bg-white rounded-lg shadow-xl p-6">
-            <h2 class="text-2xl font-bold text-primary mb-8">Créditos 👥</h2>
-            <img src="/public/img/Gala6.avif" alt="Créditos" class="w-full mb-4">
-            <div class="text-gray-700 space-y-4">
-              <p>Ilustraciones de la página: Byakko, mariadefresa</p>
-              <p>Modelo: Wygaia</p>
-              <p>Rig: 1.0, 1.5 y 2.0 Byakko - 3.0 MitsukiMoonVT</p>
-              <p>Página web: TakitosCorp</p>
+              <div>
+                <h3 class="font-bold text-primary text-lg mb-2">Objetivos:</h3>
+                <p class="text-gray-700">Me encantaría celebrar un concierto 3D, tener una canción original y ampliar mi público como streamer. Son objetivos complicados pero no imposibles, y con el tiempo podré lograrlos, además de plantear metas más ambiciosas.</p>
+              </div>
             </div>
           </div>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
+    <section class="py-10">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div id="discord" class="bg-gradient-secondary rounded-xl shadow-xl overflow-hidden text-white">
+          <div class="p-6">
+            <h2 class="text-2xl font-bold text-center mb-6">Server de Discord</h2>
+            <div class="rounded-lg overflow-hidden mb-6">
+              <img src="/public/img/Gala8.avif" alt="Servidor de Discord" class="w-full h-auto">
+            </div>
+            <div class="space-y-4">
+              <p>Únete al server de Discord para estar al tanto de todo junto al resto de Takitos!!</p>
+              <h3 class="font-bold text-xl mb-2">¿Qué te espera en el server?</h3>
+              <ul class="space-y-2">
+                <li class="flex items-center gap-2">
+                  <i class="fas fa-users text-accent"></i>
+                  <span>Toda la comunidad de Takitos con la que podrás hablar</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <i class="fas fa-calendar-alt text-accent"></i>
+                  <span>Eventos exclusivos</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <i class="fas fa-bell text-accent"></i>
+                  <span>Avisos de directos y vídeos nuevos</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <i class="fas fa-comment-dots text-accent"></i>
+                  <span>Charleta también con la pulpo a la gallega Galala!</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <i class="fas fa-plus-circle text-accent"></i>
+                  <span>Y mucho más...</span>
+                </li>
+              </ul>
+              <div class="mt-6 text-center">
+                <a href="https://discord.gg/Cbd5b59Zjs" class="inline-flex items-center gap-2 bg-white text-primary font-bold py-3 px-6 rounded-full shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                  <i class="fab fa-discord"></i> Unirse al Discord
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white/90 backdrop-blur-sm rounded-xl shadow-xl overflow-hidden">
+          <div class="p-6">
+            <h2 class="text-2xl font-bold text-primary text-center mb-6">Créditos 👥</h2>
+            <div class="rounded-lg overflow-hidden mb-6">
+              <img src="/public/img/Gala6.avif" alt="Créditos" class="w-full h-auto">
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div>
+                <h3 class="font-bold text-primary text-lg mb-2">Ilustraciones</h3>
+                <p class="text-gray-700">Byakko, mariadefresa</p>
+              </div>
+              <div>
+                <h3 class="font-bold text-primary text-lg mb-2">Modelo</h3>
+                <p class="text-gray-700">Wygaia</p>
+              </div>
+              <div>
+                <h3 class="font-bold text-primary text-lg mb-2">Rig</h3>
+                <p class="text-gray-700">1.0, 1.5 y 2.0 Byakko - 3.0 MitsukiMoonVT</p>
+              </div>
+              <div>
+                <h3 class="font-bold text-primary text-lg mb-2">Página web</h3>
+                <p class="text-gray-700">TakitosCorp</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <%- include('components/footer') %>
 
-  <%- include('components/scripts') %>
+  <script src="/public/js/main.js"></script>
+  </script>
 </body>
 
 </html>

@@ -1,6 +1,6 @@
 import express from "express";
 import path from "path";
-import { fileURLToPath } from 'url';
+import { fileURLToPath } from "url";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -18,7 +18,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/sw.js", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "jis", "sw.js"));
+  res.sendFile(path.join(__dirname, "public", "js", "sw.js"));
 });
 
 app.listen(port, () => {
