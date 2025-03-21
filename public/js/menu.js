@@ -8,6 +8,19 @@ menuBtn.addEventListener("click", () => {
     mobileMenu.classList.add("mobile-menu-open");
     menuBtn.classList.add("active");
     isMenuOpen = true;
+
+    setTimeout(() => {
+      mobileMenu.style.opacity = "1";
+      mobileMenu.style.transform = "translateY(0)";
+    }, 50);
+
+    const mobileLinks = mobileMenu.querySelectorAll("a");
+    mobileLinks.forEach((link, index) => {
+      setTimeout(() => {
+        link.style.opacity = "1";
+        link.style.transform = "translateY(0)";
+      }, index * 50);
+    });
   } else {
     mobileMenu.classList.add("mobile-menu-close");
     menuBtn.classList.remove("active");
@@ -16,28 +29,25 @@ menuBtn.addEventListener("click", () => {
       mobileMenu.classList.remove("mobile-menu-open", "mobile-menu-close");
       mobileMenu.classList.add("hidden");
       isMenuOpen = false;
+
+      const mobileLinks = mobileMenu.querySelectorAll("a");
+      mobileLinks.forEach((link) => {
+        link.style.opacity = "0";
+        link.style.transform = "translateY(-10px)";
+      });
+
+      mobileMenu.style.opacity = "0";
+      mobileMenu.style.transform = "translateY(-10px)";
     }, 300);
   }
 });
 
 const mobileLinks = mobileMenu.querySelectorAll("a");
-mobileLinks.forEach((link, index) => {
+mobileLinks.forEach((link) => {
   link.style.opacity = "0";
   link.style.transform = "translateY(-10px)";
   link.style.transition = "opacity 0.3s ease, transform 0.3s ease";
-  link.style.transitionDelay = `${index * 0.05}s`;
 
-  menuBtn.addEventListener("click", () => {
-    if (isMenuOpen) {
-      setTimeout(() => {
-        link.style.opacity = "1";
-        link.style.transform = "translateY(0)";
-      }, 100);
-    }
-  });
-});
-
-mobileLinks.forEach((link) => {
   link.addEventListener("click", () => {
     if (isMenuOpen) {
       menuBtn.click();
@@ -50,3 +60,7 @@ window.addEventListener("scroll", () => {
     menuBtn.click();
   }
 });
+
+mobileMenu.style.transition = "transform 0.3s ease, opacity 0.3s ease";
+mobileMenu.style.transform = "translateY(-10px)";
+mobileMenu.style.opacity = "0";
