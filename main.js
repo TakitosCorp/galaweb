@@ -1,7 +1,8 @@
 import express from "express";
 import path from "path";
 import { fileURLToPath } from "url";
-import { config as configDotenv } from "dotenv"; 
+import { config as configDotenv } from "dotenv";
+import axios from "axios";
 
 configDotenv();
 
@@ -20,8 +21,30 @@ app.get("/", (req, res) => {
   res.render("index");
 });
 
-app.get("/yt", (req, res) => {
-  res.render("youtube", { cid: process.env.YOUTUBE_CHANNEL_ID });
+app.get("/youtube-feed", async (req, res) => {
+  const cid = process.env.YOUTUBE_CHANNEL_ID;
+  const channelURL = `https://www.youtube.com/feeds/videos.xml?channel_id=${cid}`;
+
+  try {
+    const response = await axios.get(channelURL);
+    const xmlData = response.data;
+
+    const accept = req.headers.accept;
+    if (accept.includes("application/json")) {
+      res.json({ xmlData });
+    } else if (accept.includes("text/html")) {
+      res.send(xmlData);
+    } else {
+      res.type("application/xml").send(xmlData);
+    }
+  } catch (error) {
+    console.error("Error fetching YouTube feed:", error);
+    res.status(500).send("Error fetching YouTube feed");
+  }
+});
+
+app.get("/yt", async (req, res) => {
+  res.render("youtube");
 });
 
 app.get("/sw.js", (req, res) => {
