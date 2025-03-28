@@ -47,6 +47,10 @@ app.get("/yt", async (req, res) => {
   res.render("youtube");
 });
 
+app.get("/test", (req, res) => {
+  res.render("test");
+});
+
 app.get("/sw.js", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "js", "sw.js"));
 });

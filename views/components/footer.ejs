@@ -1,20 +1,23 @@
-<footer class="bg-gradient-secondary text-white py-5">
+<footer class="bg-gradient-secondary text-white py-8 relative z-20 mt-auto">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex flex-col items-center gap-6">
       <div class="text-center">
-        <p>&copy; <span id="current-year"></span> TakitosCorp.</p>
+        <p>&copy; <span id="current-year"></span> TakitosCorp & GalaYaki.</p>
       </div>
     </div>
   </div>
 </footer>
 <script>
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', function() {
-      navigator.serviceWorker.register('/sw.js').then(function(registration) {
-        console.log('ServiceWorker registration successful with scope: ', registration.scope);
-      }, function(error) {
-        console.log('ServiceWorker registration failed: ', error);
-      });
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", function () {
+      navigator.serviceWorker.register("/sw.js").then(
+        function (registration) {
+          console.log("ServiceWorker registration successful with scope: ", registration.scope);
+        },
+        function (error) {
+          console.log("ServiceWorker registration failed: ", error);
+        }
+      );
     });
   }
 </script>

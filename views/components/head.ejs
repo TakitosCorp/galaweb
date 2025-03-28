@@ -1,99 +1,109 @@
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GalaYaki - Tu VTuber Pulpo Favorita!</title>
-  <meta name="title" content="GalaYaki - Tu VTuber Pulpo Favorita!" />
-  <meta name="description" content="La web oficial con toda la información sobre la VTuber pulpo que conquistará tu corazón 💜" />
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GalaYaki - Tu VTuber Pulpo Favorita!</title>
+    <meta name="title" content="GalaYaki - Tu VTuber Pulpo Favorita!" />
+    <meta
+      name="description"
+      content="La web oficial con toda la información sobre la VTuber pulpo que conquistará tu corazón 💜" />
 
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://galayaki.info.gf" />
-  <meta property="og:title" content="GalaYaki - Tu VTuber Pulpo Favorita!" />
-  <meta property="og:description" content="La web oficial con toda la información sobre la VTuber pulpo que conquistará tu corazón 💜" />
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://galayaki.info.gf" />
+    <meta property="og:title" content="GalaYaki - Tu VTuber Pulpo Favorita!" />
+    <meta
+      property="og:description"
+      content="La web oficial con toda la información sobre la VTuber pulpo que conquistará tu corazón 💜" />
 
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:url" content="https://galayaki.info.gf" />
-  <meta property="twitter:title" content="GalaYaki - Tu VTuber Pulpo Favorita!" />
-  <meta property="twitter:description" content="La web oficial con toda la información sobre la VTuber pulpo que conquistará tu corazón 💜" />
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://galayaki.info.gf" />
+    <meta property="twitter:title" content="GalaYaki - Tu VTuber Pulpo Favorita!" />
+    <meta
+      property="twitter:description"
+      content="La web oficial con toda la información sobre la VTuber pulpo que conquistará tu corazón 💜" />
 
-  <meta name="theme-color" content="#9333EA">
+    <meta name="theme-color" content="#9333EA" />
 
-  <link rel="icon" type="image/png" href="/public/img/favicon.png">
-  <link rel="canonical" href="https://galayaki.info.gf/">
+    <link rel="icon" type="image/png" href="/public/img/favicon.png" />
+    <link rel="canonical" href="https://galayaki.info.gf/" />
 
-  <script src="/public/js/tailwindcss.js"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: '#9333EA',
-            secondary: '#A855F7',
-            accent: '#C084FC',
-            dark: '#4C1D95',
-            light: '#F5F3FF',
-          },
-          animation: {
-            'float': 'float 6s ease-in-out infinite',
-            'bounce': 'bounce 2s infinite',
-            'glow': 'glow 2.5s infinite',
-          },
-          keyframes: {
-            float: {
-              '0%, 100%': {
-                transform: 'translateY(0)'
+    <script src="/public/js/tailwindcss.js"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#9333EA",
+              secondary: "#A855F7",
+              accent: "#C084FC",
+              dark: "#4C1D95",
+              light: "#F5F3FF",
+            },
+            animation: {
+              float: "float 6s ease-in-out infinite",
+              bounce: "bounce 2s infinite",
+              glow: "glow 2.5s infinite",
+            },
+            keyframes: {
+              float: {
+                "0%, 100%": {
+                  transform: "translateY(0)",
+                },
+                "50%": {
+                  transform: "translateY(-20px)",
+                },
               },
-              '50%': {
-                transform: 'translateY(-20px)'
+              bounce: {
+                "0%, 20%, 50%, 80%, 100%": {
+                  transform: "translateY(0)",
+                },
+                "40%": {
+                  transform: "translateY(-10px)",
+                },
+                "60%": {
+                  transform: "translateY(-5px)",
+                },
+              },
+              glow: {
+                "0%, 100%": {
+                  filter: "drop-shadow(0 0 5px rgba(147, 51, 234, 0.6))",
+                },
+                "50%": {
+                  filter: "drop-shadow(0 0 15px rgba(147, 51, 234, 0.8))",
+                },
               },
             },
-            bounce: {
-              '0%, 20%, 50%, 80%, 100%': {
-                transform: 'translateY(0)'
-              },
-              '40%': {
-                transform: 'translateY(-10px)'
-              },
-              '60%': {
-                transform: 'translateY(-5px)'
-              },
-            },
-            glow: {
-              '0%, 100%': {
-                filter: 'drop-shadow(0 0 5px rgba(147, 51, 234, 0.6))'
-              },
-              '50%': {
-                filter: 'drop-shadow(0 0 15px rgba(147, 51, 234, 0.8))'
-              },
-            },
           },
-        }
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="/public/css/main.css" />
+    <link rel="stylesheet" href="/public/fonts/Comfortaa.ttf" />
+    <style>
+      @font-face {
+        font-family: "Comfortaa";
+        src: url("/public/fonts/Comfortaa.ttf") format("truetype");
       }
-    }
-  </script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="/public/css/main.css">
-  <link rel="stylesheet" href="/public/fonts/Comfortaa.ttf">
-  <style>
-    @font-face {
-      font-family: 'Comfortaa';
-      src: url('/public/fonts/Comfortaa.ttf') format('truetype');
-    }
 
-    body {
-      scroll-behavior: smooth;
-      font-family: Comfortaa, sans-serif;
-    }
+      body {
+        scroll-behavior: smooth;
+        font-family: Comfortaa, sans-serif;
+      }
 
-    #mobile-menu {
-      transition: transform 0.3s ease-in-out;
-      transform: translateX(100%);
-    }
+      #mobile-menu {
+        transition: transform 0.3s ease-in-out;
+        transform: scaleY(0);
+        transform-origin: top;
+      }
 
-    button {
-      position: relative;
-      z-index: 10;
-    }
-  </style>
-</head>
+      button {
+        position: relative;
+        z-index: 10;
+      }
+    </style>
+  </head>
+</html>
