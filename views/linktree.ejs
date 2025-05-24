@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- include('components/head') %>
+
+<body class="text-gray-800 overflow-x-hidden flex flex-col min-h-screen">
+  <div class="bg-overlay"></div>
+  <div class="hidden lg:block fixed inset-0 z-0" id="bubbles-container"></div>
+  <%- include('components/header') %>
+
+  <main class="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 flex-grow relative z-10 pt-24">
+    <section class="py-10">
+      <div class="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl p-6 sm:p-10">
+        <div class="text-center mb-8">
+          <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-primary shadow-lg">
+            <img src="/public/img/Gala9.avif" alt="GalaYaki" class="w-full h-full object-cover">
+          </div>
+          <h1 class="text-3xl md:text-4xl font-bold text-gradient animate-glow">GalaYaki</h1>
+          <p class="text-gray-600 mt-2">🐙 VTuber española mitad pulpo 🎮</p>
+        </div>
+
+        <div class="space-y-4 max-w-xl mx-auto">
+          <a href="https://www.youtube.com/@galayaki" class="block bg-gradient-to-r from-red-700 to-red-500 hover:from-red-600 hover:to-red-400 text-white font-bold py-4 px-6 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-3">
+            <i class="fab fa-youtube text-2xl"></i>
+            <span>YouTube</span>
+          </a>
+
+          <a href="https://x.com/GalaYaki" class="block bg-gradient-to-r from-blue-600 to-blue-400 hover:from-blue-500 hover:to-blue-300 text-white font-bold py-4 px-6 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-3">
+            <i class="fab fa-twitter text-2xl"></i>
+            <span>Twitter</span>
+          </a>
+
+          <a href="https://discord.gg/Cbd5b59Zjs" class="block bg-gradient-to-r from-indigo-700 to-indigo-500 hover:from-indigo-600 hover:to-indigo-400 text-white font-bold py-4 px-6 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-3">
+            <i class="fab fa-discord text-2xl"></i>
+            <span>Discord</span>
+          </a>
+
+          <a href="https://www.instagram.com/galayaki.vt/" class="block bg-gradient-to-r from-pink-600 to-orange-500 hover:from-pink-500 hover:to-orange-400 text-white font-bold py-4 px-6 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-3">
+            <i class="fab fa-instagram text-2xl"></i>
+            <span>Instagram</span>
+          </a>
+
+          <a href="https://ko-fi.com/galayaki" class="block bg-gradient-to-r from-blue-600 to-blue-400 hover:from-blue-500 hover:to-blue-300 text-white font-bold py-4 px-6 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-3">
+            <i class="fas fa-coffee text-2xl"></i>
+            <span>Ko-fi</span>
+          </a>
+
+          <a href="https://throne.com/galayaki" class="block bg-gradient-to-r from-amber-600 to-amber-400 hover:from-amber-500 hover:to-amber-300 text-white font-bold py-4 px-6 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-3">
+            <i class="fas fa-crown text-2xl"></i>
+            <span>Throne</span>
+          </a>
+
+          <a href="https://www.streamloots.com/galach" class="block bg-gradient-to-r from-green-600 to-green-400 hover:from-green-500 hover:to-green-300 text-white font-bold py-4 px-6 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-3">
+            <i class="fas fa-gamepad text-2xl"></i>
+            <span>Streamloots</span>
+          </a>
+
+          <a href="https://www.twitch.tv/galayaki" class="block bg-gradient-to-r from-purple-700 to-purple-500 hover:from-purple-600 hover:to-purple-400 text-white font-bold py-4 px-6 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-3">
+            <i class="fab fa-twitch text-2xl"></i>
+            <span>Twitch</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <%- include('components/footer') %>
+  <script type="module" src="/public/js/yt.js"></script>
+</body>
+
+</html>

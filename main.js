@@ -21,6 +21,14 @@ app.get("/", (req, res) => {
   res.render("index");
 });
 
+app.get("/yt", async (req, res) => {
+  res.render("youtube");
+});
+
+app.get("/links", (req, res) => {
+  res.render("linktree");
+});
+
 app.get("/youtube-feed", async (req, res) => {
   const cid = process.env.YOUTUBE_CHANNEL_ID;
   const channelURL = `https://www.youtube.com/feeds/videos.xml?channel_id=${cid}`;
@@ -41,14 +49,6 @@ app.get("/youtube-feed", async (req, res) => {
     console.error("Error fetching YouTube feed:", error);
     res.status(500).send("Error fetching YouTube feed");
   }
-});
-
-app.get("/yt", async (req, res) => {
-  res.render("youtube");
-});
-
-app.get("/test", (req, res) => {
-  res.render("test");
 });
 
 app.get("/sw.js", (req, res) => {
